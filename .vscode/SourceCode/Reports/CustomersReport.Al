@@ -1,4 +1,4 @@
-report 50100 "Customers Report"
+report 50110 "Customers Report"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
@@ -22,7 +22,15 @@ report 50100 "Customers Report"
             {
 
             }
+
+
+
+
+
+
         }
+
+
     }
 
 }
