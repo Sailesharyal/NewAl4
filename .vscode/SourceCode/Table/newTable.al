@@ -11,6 +11,13 @@ table 50160 "Student Form"
 
         }
 
+        field(4; "Autogenerate"; Code[20])
+        {
+
+        }
+
+
+
         field(2; "Symbol Number"; Integer)
         {
             DataClassification = ToBeClassified;
@@ -59,4 +66,10 @@ table 50160 "Student Form"
 
     end;
 
+
+
+
+
 }
+
+
