@@ -1,10 +1,10 @@
-table 50141 "Customer Detail"
+table 50200 "Customer Detail"
 {
     DataClassification = ToBeClassified;
 
     fields
     {
-        field(1; "Customer Number"; Integer)
+        field(1; "Customer Number"; Code[20])
         {
             DataClassification = ToBeClassified;
 
@@ -12,7 +12,7 @@ table 50141 "Customer Detail"
 
         field(10; "For Number Series"; Code[20])
         {
-            TableRelation = "Sales & Receivables Setup";
+            TableRelation = "No. Series";
         }
 
         field(2; "Customer NAme"; Text[20])
@@ -64,10 +64,14 @@ table 50141 "Customer Detail"
     }
 
     var
-        myInt: Integer;
+        IsCodeunit: Codeunit "NoSeriesManagement";   //Calling NoseriesManagement 
+        Sales_Rec: Record "Sales & Receivables Setup";
 
     trigger OnInsert()
     begin
+        if Rec."Customer Number" = '' then
+            Sales_Rec.Get();
+        IsCodeunit.InitSeries(Sales_Rec."Student Symbol", Sales_Rec."Student Symbol", 0D, "Customer Number", "For Number Series");
 
     end;
 
@@ -85,5 +89,6 @@ table 50141 "Customer Detail"
     begin
 
     end;
+
 
 }
