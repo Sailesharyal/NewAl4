@@ -12,7 +12,6 @@ report 50112 "Vendors Report"
 
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.";
-
             column(Name; Name)
             {
 
@@ -27,33 +26,80 @@ report 50112 "Vendors Report"
             {
 
             }
-
-
-
-        }
-
-        dataitem(Customer; Customer)
-
-         DataItemLink = "Name" = field("No.");
-        {
-           
-
-            column("Name_Customer"; Name)
+            dataitem(Customer; Customer)
             {
+                DataItemLinkReference = Vendor;
+                DataItemLink = "No." = field("No.");
+                DataItemTableView = sorting("Name");
+                RequestFilterFields = Address;
+
+
+
+
+                column("Name_Customer"; Name)
+                {
+
+                }
+
+                column(No__of_Ship_to_Addresses; "No. of Ship-to Addresses")
+                {
+
+
+                }
+
+
+
 
             }
-
-            column(No__of_Ship_to_Addresses; "No. of Ship-to Addresses")
-            {
-
-
-            }
-
-
 
 
         }
     }
 
+    requestpage
+    {
+        layout
+        {
+            area(Content)
+            {
+                group(Options)
+                {
 
+                    field(CustomerNo; CustomerNo)
+                    {
+                        Caption = 'Customer No.';
+                        ApplicationArea = All;
+                        trigger OnValidate()
+                        var
+                            myInt: Integer;
+                        begin
+                            if CustomerNo <> '' then
+                                Customer.SetRange("No.", CustomerNo);
 
+                        end;
+                    }
+                }
+            }
+        }
+
+        actions
+        {
+            area(Processing)
+            {
+                action(NewAction)
+                {
+                    ApplicationArea = All;
+
+                    trigger OnAction()
+                    begin
+                        Message('This is a message');
+                    end;
+                }
+            }
+        }
+
+    }
+
+    var
+        CustomerNo: Code[20];
+}
