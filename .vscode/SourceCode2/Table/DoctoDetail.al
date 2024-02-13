@@ -9,6 +9,21 @@ table 50202 "Doctor Detail"
             DataClassification = ToBeClassified;
 
         }
+
+        field(2; "Doctor Name(DR.)"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(3; Speciality; Option)
+        {
+            OptionMembers = "Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
+        }
+
+
+
+
+
     }
 
     keys

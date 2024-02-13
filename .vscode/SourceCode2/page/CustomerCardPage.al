@@ -40,6 +40,16 @@ page 50200 "Customer Detail Page"
                     ApplicationArea = All;
                 }
 
+                field("Doctor Name"; Rec."Doctor Name")
+                {
+                    ApplicationArea = ALL;
+                }
+
+                field("Doctor's Speciality"; Rec."Doctor's Speciality")
+                {
+                    ApplicationArea = ALL;
+                }
+
             }
         }
     }

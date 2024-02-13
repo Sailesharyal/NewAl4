@@ -8,6 +8,8 @@ table 50200 "Customer Detail"
         {
             DataClassification = ToBeClassified;
 
+            Editable = false;
+
         }
 
         field(10; "For Number Series"; Code[20])
@@ -44,9 +46,19 @@ table 50200 "Customer Detail"
             DataClassification = ToBeClassified;
         }
 
-        field(7; "Doctor To see"; Code[20])
+
+
+
+        field(7; "Doctor Name"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            TableRelation = "Doctor Detail";
+
+
+        }
+
+        field(8; "Doctor's Speciality"; Code[20])
+        {
+
         }
     }
 
@@ -71,7 +83,7 @@ table 50200 "Customer Detail"
     begin
         if Rec."Customer Number" = '' then
             Sales_Rec.Get();
-        IsCodeunit.InitSeries(Sales_Rec."Student Symbol", Sales_Rec."Student Symbol", 0D, "Customer Number", "For Number Series");
+        IsCodeunit.InitSeries(Sales_Rec."Order Nos.", Sales_Rec."Customer Nos.", 0D, "Customer Number", "For Number Series")
 
     end;
 
