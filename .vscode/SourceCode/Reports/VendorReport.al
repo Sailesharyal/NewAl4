@@ -10,7 +10,7 @@ report 50112 "Vendors Report"
         dataitem(Vendor; Vendor)
         {
 
-            DataItemTableView = sorting("No.");
+            DataItemTableView = sorting("No.", Name);
             RequestFilterFields = "No.";
             column(Name; Name)
             {
@@ -23,6 +23,11 @@ report 50112 "Vendors Report"
             }
 
             column(No_; "No.")
+            {
+
+            }
+
+            column(CustomerNo; CustomerNo)
             {
 
             }
@@ -78,28 +83,41 @@ report 50112 "Vendors Report"
 
                         end;
                     }
+                    field(Bk; BK)
+                    {
+                        ApplicationArea = all;
+                    }
                 }
             }
         }
 
         actions
         {
-            area(Processing)
-            {
-                action(NewAction)
-                {
-                    ApplicationArea = All;
 
-                    trigger OnAction()
-                    begin
-                        Message('This is a message');
-                    end;
-                }
-            }
+            // area(Processing)
+            // {
+            //     action(NewAction)
+            //     {
+            //         ApplicationArea = All;
+
+            //         trigger OnAction()
+            //         begin
+            //             Message('This is a message');
+            //         end;
+            //     }
+            // }
         }
+        trigger OnOpenPage()
+        var
+            myInt: Integer;
+        begin
+            bk := True;
+        end;
+
 
     }
 
     var
         CustomerNo: Code[20];
+        bk: Boolean;
 }
