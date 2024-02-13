@@ -3,6 +3,7 @@ report 50112 "Vendors Report"
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
+    ProcessingOnly=true;
     RDLCLayout = '.vscode/SourceCode/Reports/VendorReport.RDL';
 
     dataset
@@ -83,9 +84,18 @@ report 50112 "Vendors Report"
 
                         end;
                     }
+
+
                     field(Bk; BK)
                     {
                         ApplicationArea = all;
+
+                        trigger OnValidate()
+                         var 
+                         
+                        begin
+                            
+                        end;
                     }
                 }
             }
