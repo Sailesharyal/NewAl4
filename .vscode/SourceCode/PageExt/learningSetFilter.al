@@ -24,7 +24,8 @@ pageextension 50200 "learniigSetFilter" extends "Item List"
 
                 trigger OnAction()                  //Learning about Set Filters 
                 begin
-                    Rec.SetFilter("No.", '80001..80010 | 80025');
+                    // Rec.SetFilter("No.", '80001..80010 | 80025');
+                    Rec.SetFilter("No.", '%1..%2 | %3', '80001', '80010', '80025');
                 end;
 
 
@@ -43,6 +44,7 @@ pageextension 50200 "learniigSetFilter" extends "Item List"
                 trigger OnAction()
                 begin
                     Rec.SetRange("Unit Cost", 2.70, 30.00);
+
                 end;
 
             }

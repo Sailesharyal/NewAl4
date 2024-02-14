@@ -4,9 +4,15 @@ table 50202 "Doctor Detail"
 
     fields
     {
-        field(1; "Doctor Number"; Integer)
+        field(1; "Doctor Number"; Code[20])
         {
             DataClassification = ToBeClassified;
+
+        }
+
+        field(4; "For_Number Series"; Code[20])
+        {
+            TableRelation = "No. Series";
 
         }
 
@@ -17,7 +23,7 @@ table 50202 "Doctor Detail"
 
         field(3; Speciality; Option)
         {
-            OptionMembers = "Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
+            OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
         }
 
 
@@ -40,10 +46,14 @@ table 50202 "Doctor Detail"
     }
 
     var
-        myInt: Integer;
+        IsCodeUnit: Codeunit "NoSeriesManagement";
+        IsSales: Record "Sales & Receivables Setup";
 
     trigger OnInsert()
     begin
+        if Rec."Doctor Number" = '' then
+            IsSales.Get();
+        IsCodeUnit.InitSeries(Issales."Invoice Nos.", IsSales."Invoice Nos.", 0D, "Doctor Number", "For_Number Series");
 
     end;
 

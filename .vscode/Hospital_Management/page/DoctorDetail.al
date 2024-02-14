@@ -26,6 +26,12 @@ page 50205 "Doctor Detail"
                 {
                     ApplicationArea = All;
                 }
+
+                // field("For_Number Series"; Rec."For_Number Series")
+                // {
+                //     ApplicationArea = All;
+                // }
+
             }
         }
         area(Factboxes)

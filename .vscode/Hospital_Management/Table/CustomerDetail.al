@@ -54,10 +54,17 @@ table 50200 "Customer Detail"
             TableRelation = "Doctor Detail";
 
 
+
+
         }
 
-        field(8; "Doctor's Speciality"; Code[20])
+        field(8; "Doctor's Speciality"; Option)
         {
+
+            OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
+            FieldClass = FlowField;
+            CalcFormula = lookup("Doctor Detail".Speciality where("Doctor Name(DR.)" = field("Doctor Name")));
+
 
         }
     }
