@@ -41,6 +41,18 @@ page 50201 "Customer Detail List"
                     ApplicationArea = All;
                 }
 
+                field("Doctor Code"; Rec."Doctor Code")
+                {
+                    ApplicationArea = All;
+                }
+                field(Discount; Rec.Discount)
+                {
+                    ApplicationArea = All;
+                }
+                field("Register Time"; Rec."Register Time")
+                {
+                    ApplicationArea = All;
+                }
 
 
             }
@@ -53,17 +65,38 @@ page 50201 "Customer Detail List"
 
     actions
     {
-        area(Processing)
+        area(Creation)
         {
-            action(ActionName)
+            action("Set Filter")
             {
                 ApplicationArea = All;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Image = Approve;
 
                 trigger OnAction()
                 begin
-
+                    Rec.SetFilter("Customer Number", '%1 | %2', '1024', '1026');
                 end;
             }
+
+
+            action("Set Range")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Image = Approve;
+
+                trigger OnAction()
+                begin
+                    Rec.SetRange("Doctor Code", '1014');
+                end;
+            }
+
+
         }
     }
 }

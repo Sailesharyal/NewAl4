@@ -24,9 +24,24 @@ table 50200 "Customer Detail"
 
         }
 
-        field(3; "Age"; Text[30])
+        field(3; "Age"; Integer)
         {
             DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                if age <= 10 then begin
+                    rec.Discount := true;
+                    Message('You are a child. so, You get a Discount');
+                end
+                else
+                    if Age >= 10 then begin
+                        rec.Discount := false;
+                        Message('Your are an adult.So, you dont get discount');
+                    end
+
+            end;
+
 
         }
 
@@ -46,12 +61,48 @@ table 50200 "Customer Detail"
             DataClassification = ToBeClassified;
         }
 
+        field(11; "Doctor Code"; Code[20])
+        {
+            TableRelation = "Doctor Detail";
+
+            trigger OnValidate()
+            var
+                name: Record "Doctor Detail";
+                Doc: Record "Doctor Detail";
+
+            begin
+                if name.Get("Doctor Code") then
+                    Rec."Doctor Name" := name."Doctor Name(DR.)"
+                else
+                    ;
+
+            end;
+
+
+
+        }
+
 
 
 
         field(7; "Doctor Name"; Code[20])
         {
-            TableRelation = "Doctor Detail";
+
+
+            // FieldClass = FlowField;
+            // CalcFormula = lookup("Doctor Detail"."Doctor Name(DR.)" where("Doctor Number" = field("Doctor Code")));
+            Editable = false;
+
+            // trigger OnValidate()
+            // var
+            //     Doc: Record "Doctor Detail";
+            // begin
+            //     if Doc.Get("Customer Number") then
+            //         rec."Doctor's Speciality" := Doc.Speciality
+
+            // end;
+
+
 
 
 
@@ -64,10 +115,30 @@ table 50200 "Customer Detail"
             OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
             FieldClass = FlowField;
             CalcFormula = lookup("Doctor Detail".Speciality where("Doctor Name(DR.)" = field("Doctor Name")));
+            Editable = false;
 
 
         }
+
+        field(12; "Discount"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+
+
+        }
+
+        field(13; "Register Time"; Datetime)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(14; "Problem"; Text[20])
+        {
+            DataClassification = ToBeClassified;
+        }
+
     }
+
 
     keys
     {

@@ -1,16 +1,16 @@
-page 50205 "Doctor Detail"
+page 50204 "Doctor Card Page"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = Administration;
     SourceTable = "Doctor Detail";
-    CardPageId = "Doctor Card Page";
+
 
     layout
     {
         area(Content)
         {
-            repeater(GroupName)
+            group("Doctor Detail")
             {
                 field("Doctor Name(DR.)"; Rec."Doctor Name(DR.)")
                 {
@@ -28,16 +28,9 @@ page 50205 "Doctor Detail"
                     ApplicationArea = All;
                 }
 
-                // field("For_Number Series"; Rec."For_Number Series")
-                // {
-                //     ApplicationArea = All;
-                // }
+
 
             }
-        }
-        area(Factboxes)
-        {
-
         }
     }
 
@@ -45,12 +38,9 @@ page 50205 "Doctor Detail"
     {
         area(Processing)
         {
-            action("Set Filter")
+            action(ActionName)
             {
                 ApplicationArea = All;
-                Promoted = true;
-                PromotedIsBig = true;
-                Image = Approve;
 
                 trigger OnAction()
                 begin
@@ -59,4 +49,7 @@ page 50205 "Doctor Detail"
             }
         }
     }
+
+    var
+        myInt: Integer;
 }

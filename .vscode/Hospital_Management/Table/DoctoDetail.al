@@ -2,11 +2,12 @@ table 50202 "Doctor Detail"
 {
     DataClassification = ToBeClassified;
 
+
     fields
     {
         field(1; "Doctor Number"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
 
@@ -18,12 +19,14 @@ table 50202 "Doctor Detail"
 
         field(2; "Doctor Name(DR.)"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(3; Speciality; Option)
         {
             OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
+
+            DataClassification = CustomerContent;
         }
 
 

@@ -40,6 +40,20 @@ page 50200 "Customer Detail Page"
                     ApplicationArea = All;
                 }
 
+                field(Discount; Rec.Discount)
+                {
+                    ApplicationArea = All;
+                }
+                field("Register Time"; Rec."Register Time")
+                {
+                    ApplicationArea = All;
+                }
+
+
+
+            }
+            group("Doctor's Detail")
+            {
                 field("Doctor Name"; Rec."Doctor Name")
                 {
                     ApplicationArea = ALL;
@@ -50,7 +64,16 @@ page 50200 "Customer Detail Page"
                     ApplicationArea = ALL;
                 }
 
+                field("Doctor Code"; Rec."Doctor Code")
+                {
+                    ApplicationArea = All;
+                }
+
+
+
             }
+
+
         }
     }
 
