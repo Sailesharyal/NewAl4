@@ -88,7 +88,7 @@ page 50201 "Customer Detail List"
                 Promoted = true;
                 PromotedIsBig = true;
                 PromotedCategory = Process;
-                Image = Approve;
+                Image = Workflow;
 
                 trigger OnAction()
                 begin
