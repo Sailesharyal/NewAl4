@@ -18,7 +18,7 @@ table 50206 "Medicine Detail"
 
         field(3; "Medicine Name"; text[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 
