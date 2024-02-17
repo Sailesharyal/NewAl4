@@ -12,6 +12,8 @@ report 50120 "Purchase Order"
         dataitem("Purchase Header"; "Purchase Header")
         {
             DataItemTableView = where(Status = filter(true));
+            RequestFilterFields = Status;
+
             column(Buy_from_Vendor_Name; "Buy-from Vendor Name")
             {
 
@@ -27,6 +29,11 @@ report 50120 "Purchase Order"
             }
 
             column(Status; Status)
+            {
+
+            }
+
+            column(Buy_from_Contact; "Buy-from Contact")
             {
 
             }
