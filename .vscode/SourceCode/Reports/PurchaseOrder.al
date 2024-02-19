@@ -11,8 +11,8 @@ report 50160 "Purchase Order"
     {
         dataitem("Purchase Header"; "Purchase Header")
         {
-            DataItemTableView = where(Status = filter(true));
-            RequestFilterFields = Status, "Vendor Invoice No.";
+            DataItemTableView = where(Status = filter(1));
+            RequestFilterFields =;
 
 
             column(Buy_from_Vendor_Name; "Buy-from Vendor Name")
