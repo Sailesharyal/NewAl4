@@ -15,6 +15,7 @@ report 50160 "Purchase Order"
             RequestFilterFields =;
 
 
+
             column(Buy_from_Vendor_Name; "Buy-from Vendor Name")
             {
 
@@ -39,9 +40,15 @@ report 50160 "Purchase Order"
 
             }
 
+            // column()
+            // {
+
+            // }
+
             dataitem("Purchase Line"; "Purchase Line")
             {
                 DataItemLinkReference = "Purchase Header";
+                RequestFilterFields = "No.";
 
 
                 column(Type; Type)
@@ -73,6 +80,17 @@ report 50160 "Purchase Order"
                 {
 
                 }
+                column(companypic; companyinfo.Picture)
+                {
+
+                }
+
+                trigger OnAfterGetRecord()
+
+                begin
+                    companyinfo.get;
+                    companyinfo.CalcFields(Picture);
+                end;
 
             }
 
@@ -91,4 +109,5 @@ report 50160 "Purchase Order"
 
     var
         myInt: Integer;
+        companyinfo: Record "Company Information";
 }
