@@ -94,6 +94,45 @@ page 50199 "Learning about Actions"
 
             }
         }
+        area(Creation)
+        {
+
+            action("Concert Mangement")
+            {
+                RunObject = page "Doctor Card Page";
+                ToolTip = 'Click here to go to Doctor Card Page';
+                Caption = 'Concert management page';
+                Image = AdjustEntries;
+
+
+            }
+
+        }
+
+        area(Reporting)
+        {
+            group(reports)
+            {
+                action("Sales  Shipment report")
+                {
+                    Image = Report;
+                    Caption = 'Sales Shipment Report';
+                    ToolTip = 'This action redirect you to Sales Shipment Report';
+                    RunObject = report "Sales - Shipment";
+                }
+
+                action("Order ")
+                {
+                    Image = Order;
+                    RunObject = report "Order";
+                    ToolTip = 'This action redirect you to order report';
+                    Caption = 'Order Report';
+
+                }
+            }
+        }
+
+
     }
 
     var
