@@ -85,35 +85,30 @@ report 50160 "Purchase Order"
 
                 }
 
+                // // trigger OnAfterGetRecord()
+
+                // // begin
+                // //     companyinfo.get;
+                // //     companyinfo.CalcFields(Picture);
+                // // end
+
+
+
+
                 // trigger OnAfterGetRecord()
 
-                // begin
-                //     companyinfo.get;
-                //     companyinfo.CalcFields(Picture);
-                // end
-
-
-
-
-                trigger OnAfterGetRecord()
-
-                begin
-                    if status1 = true then begin
-                        "Purchase Header".SetRange(Status::Released);
-                    end
-                    else begin
-                        "Purchase Header".SetRange(Status::Open);
-                    end;
-                end;
-
+                // // begin
+                // //     if status1 = true then begin
+                // //         "Purchase Header".SetRange(Status::Released);
+                // //     end
+                // //     else begin
+                // //         "Purchase Header".SetRange(Status::Open);
+                // //     end;
+                // // end;
             }
-
-
-
-
-
         }
     }
+
 
 
 
