@@ -79,6 +79,7 @@ page 50199 "Learning about Actions"
                 }
 
                 action("sales Card")
+
                 {
                     Caption = 'Sales & Marketing manager';
                     ToolTip = 'Click here to go to the Sales card';
