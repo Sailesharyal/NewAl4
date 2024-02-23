@@ -1,4 +1,4 @@
-report 50130 "Sales Order"
+report 50130 "Sales Order Report1"
 {
     Caption = 'Sales Order';
     UsageCategory = Administration;
@@ -15,7 +15,7 @@ report 50130 "Sales Order"
         {
 
             // DataItemTableView = where(Status = filter(1));
-            RequestFilterFields = "Document Type";
+
 
             column(Document_Type; "Document Type")
             {
@@ -40,7 +40,7 @@ report 50130 "Sales Order"
             {
 
                 DataItemLinkReference = "Sales Header";
-                DataItemLink = "Document Type" = field("Document Type"), "No." = field("No.");
+                DataItemLink = "No." = field("No.");
 
                 column(Document_No_; "Document No.")
                 {
@@ -55,12 +55,19 @@ report 50130 "Sales Order"
                 {
 
                 }
-                column(Tax_Area_Code; "Tax Area Code")
+
+                column(Unit_Price; "Unit Price")
                 {
 
                 }
 
-                column(VAT__; "VAT %")
+
+                column(Prepayment_Tax_Area_Code; "Prepayment Tax Area Code")
+                {
+
+                }
+
+                column(Line_Amount; "Line Amount")
                 {
 
                 }
@@ -69,22 +76,25 @@ report 50130 "Sales Order"
                 {
 
                 }
+
+                column(Depreciation_Book_Code; "Depreciation Book Code")
+                {
+
+                }
             }
 
 
             trigger OnAfterGetRecord()
 
-            begin
-                if statust = true then begin
-                    "Sales Header".SetRange(Status, Status::Open);
-                end
-                else begin
-                    "Sales Header".SetRange(Status, Status::Released);
-                end;
-            end;
+            // begin
+            //     if statust = true then begin
+            //         "Sales Header".SetRange(Status, Status::Open);
+            //     end
+            //     else begin
+            //         "Sales Header".SetRange(Status, Status::Released);
+            //     end;
+            // end;
 
-
-            trigger OnPostDataItem()
             begin
                 companyinfo.get;
                 companyinfo.CalcFields(Picture);
