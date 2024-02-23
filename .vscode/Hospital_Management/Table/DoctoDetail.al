@@ -45,7 +45,10 @@ table 50202 "Doctor Detail"
 
     fieldgroups
     {
-        // Add changes to field groups here
+        fieldgroup(DropDown; "Doctor Number", "Doctor Name(DR.)")
+        {
+
+        }
     }
 
     var
