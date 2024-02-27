@@ -4,7 +4,7 @@ table 50199 "Customer Detail Line"
 
     fields
     {
-        field(1; "Customer Number"; code[20])
+        field(1; "Customer No"; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = "Customer Detail";
@@ -28,23 +28,25 @@ table 50199 "Customer Detail Line"
         field(5; "Amount"; Decimal)
         {
             DataClassification = ToBeClassified;
+            trigger OnValidate()
+            var
+                myInt: Integer;
+            begin
+                rec."Total Amount" := rec.Quantity * Rec.Amount;
+            end;
         }
 
         field(6; "Total Amount"; Decimal)
         {
             DataClassification = ToBeClassified;
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                "Total Amount" := rec.Quantity * Rec.Amount
-            end;
+            Editable = false;
+
         }
     }
 
     keys
     {
-        key(Key1; "Customer Number")
+        key(Key1; "Customer No", "Line No")
         {
             Clustered = true;
         }

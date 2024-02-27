@@ -70,9 +70,13 @@ page 50200 "Customer Detail Page"
                     ApplicationArea = All;
                 }
 
-
-
             }
+
+            part("Cutomer line"; CusDetailLineList)
+            {
+                SubPageLink = "Customer No" = field("Customer Number");
+            }
+
 
 
         }
@@ -93,6 +97,9 @@ page 50200 "Customer Detail Page"
             }
         }
     }
+
+
+
 
     var
         myInt: Integer;

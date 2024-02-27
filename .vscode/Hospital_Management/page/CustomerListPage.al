@@ -6,6 +6,7 @@ page 50201 "Customer Detail List"
     SourceTable = "Customer Detail";
     CardPageId = "Customer Detail Page";
 
+
     layout
     {
         area(Content)

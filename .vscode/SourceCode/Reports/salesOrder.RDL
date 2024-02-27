@@ -11,67 +11,6 @@
       <rd:DataSourceID>b6b04e99-963b-43bb-92c3-aca4c418ce1e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Document_Type">
-          <DataField>Document_Type</DataField>
-        </Field>
-        <Field Name="CustomerName">
-          <DataField>CustomerName</DataField>
-        </Field>
-        <Field Name="Contact">
-          <DataField>Contact</DataField>
-        </Field>
-        <Field Name="Status">
-          <DataField>Status</DataField>
-        </Field>
-        <Field Name="Location_Code">
-          <DataField>Location_Code</DataField>
-        </Field>
-        <Field Name="Document_No_">
-          <DataField>Document_No_</DataField>
-        </Field>
-        <Field Name="Line_Discount__">
-          <DataField>Line_Discount__</DataField>
-        </Field>
-        <Field Name="Line_Discount__Format">
-          <DataField>Line_Discount__Format</DataField>
-        </Field>
-        <Field Name="Qty__to_Ship">
-          <DataField>Qty__to_Ship</DataField>
-        </Field>
-        <Field Name="Qty__to_ShipFormat">
-          <DataField>Qty__to_ShipFormat</DataField>
-        </Field>
-        <Field Name="Unit_Price">
-          <DataField>Unit_Price</DataField>
-        </Field>
-        <Field Name="Unit_PriceFormat">
-          <DataField>Unit_PriceFormat</DataField>
-        </Field>
-        <Field Name="Prepayment_Tax_Area_Code">
-          <DataField>Prepayment_Tax_Area_Code</DataField>
-        </Field>
-        <Field Name="Line_Amount">
-          <DataField>Line_Amount</DataField>
-        </Field>
-        <Field Name="Line_AmountFormat">
-          <DataField>Line_AmountFormat</DataField>
-        </Field>
-        <Field Name="companyPic">
-          <DataField>companyPic</DataField>
-        </Field>
-        <Field Name="Depreciation_Book_Code">
-          <DataField>Depreciation_Book_Code</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1038,12 +977,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1083,4 +1016,65 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="Contact">
+          <DataField>Contact</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Document_No_">
+          <DataField>Document_No_</DataField>
+        </Field>
+        <Field Name="Line_Discount__">
+          <DataField>Line_Discount__</DataField>
+        </Field>
+        <Field Name="Line_Discount__Format">
+          <DataField>Line_Discount__Format</DataField>
+        </Field>
+        <Field Name="Qty__to_Ship">
+          <DataField>Qty__to_Ship</DataField>
+        </Field>
+        <Field Name="Qty__to_ShipFormat">
+          <DataField>Qty__to_ShipFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price">
+          <DataField>Unit_Price</DataField>
+        </Field>
+        <Field Name="Unit_PriceFormat">
+          <DataField>Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="Prepayment_Tax_Area_Code">
+          <DataField>Prepayment_Tax_Area_Code</DataField>
+        </Field>
+        <Field Name="Line_Amount">
+          <DataField>Line_Amount</DataField>
+        </Field>
+        <Field Name="Line_AmountFormat">
+          <DataField>Line_AmountFormat</DataField>
+        </Field>
+        <Field Name="companyPic">
+          <DataField>companyPic</DataField>
+        </Field>
+        <Field Name="Depreciation_Book_Code">
+          <DataField>Depreciation_Book_Code</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
