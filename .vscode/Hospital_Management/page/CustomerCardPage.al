@@ -84,16 +84,14 @@ page 50200 "Customer Detail Page"
 
     actions
     {
-        area(Processing)
+        area(Reporting)
         {
-            action(ActionName)
+            action("CusDetail Report")
             {
                 ApplicationArea = All;
+                RunObject = report "Customer Detail";
 
-                trigger OnAction()
-                begin
 
-                end;
             }
         }
     }
