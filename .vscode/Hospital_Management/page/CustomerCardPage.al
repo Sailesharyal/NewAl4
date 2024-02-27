@@ -14,6 +14,7 @@ page 50200 "Customer Detail Page"
                 field("Customer Number"; Rec."Customer Number")
                 {
                     ApplicationArea = All;
+                    ShowMandatory = true;
 
                 }
                 field("Customer NAme"; Rec."Customer NAme")
