@@ -50,7 +50,9 @@ page 50198 "CusDetailLineList"
 
 
             }
+
         }
+
     }
 
     actions

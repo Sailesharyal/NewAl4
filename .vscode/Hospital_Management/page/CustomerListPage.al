@@ -98,6 +98,7 @@ page 50201 "Customer Detail List"
             }
 
 
+
         }
     }
 }

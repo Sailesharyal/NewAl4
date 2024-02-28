@@ -103,6 +103,25 @@ page 50200 "Customer Detail Page"
                 RunObject = page "Medicine Card Page";
             }
 
+        }
+
+
+        area(Processing)
+        {
+
+            action("learningFind")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                Image = Aging;
+
+                trigger OnAction()
+                begin
+                    Rec.Find(Rec."Doctor Name");
+                    Message('This name of game is %1', rec."Doctor Name");
+                end;
+
+            }
 
         }
     }
