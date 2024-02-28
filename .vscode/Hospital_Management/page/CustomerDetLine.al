@@ -27,6 +27,7 @@ page 50198 "CusDetailLineList"
                 field("Medicine Name"; Rec."Medicine Name")
                 {
                     ApplicationArea = All;
+                    TableRelation = "Medicine Detail";
 
                 }
                 field(Quantity; Rec.Quantity)
@@ -46,6 +47,7 @@ page 50198 "CusDetailLineList"
                     ApplicationArea = All;
 
                 }
+
 
             }
         }

@@ -94,6 +94,17 @@ page 50200 "Customer Detail Page"
 
             }
         }
+
+        area(Creation)
+        {
+            action("New Medicine")
+            {
+                ApplicationArea = All;
+                RunObject = page "Medicine Card Page";
+            }
+
+
+        }
     }
 
 
