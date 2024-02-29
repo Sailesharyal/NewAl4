@@ -13,7 +13,7 @@ table 50160 "Student Form"
 
         field(4; "Autogenerate"; Code[20])
         {
-
+            TableRelation = "No. Series";
         }
 
 
@@ -44,7 +44,10 @@ table 50160 "Student Form"
     }
 
     var
-        myInt: Integer;
+        Iscodeunit: Codeunit NoSeriesManagement;
+        Issales: Record "Sales & Receivables Setup";
+
+
 
     trigger OnInsert()
     begin
@@ -65,6 +68,7 @@ table 50160 "Student Form"
     begin
 
     end;
+
 
 
 
