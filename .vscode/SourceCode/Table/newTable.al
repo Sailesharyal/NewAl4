@@ -4,7 +4,7 @@ table 50160 "Student Form"
 
     fields
     {
-        field(1; "Bill.No"; Code[50])
+        field(1; "Bill.No"; Code[20])
         {
             DataClassification = ToBeClassified;
 
@@ -51,7 +51,8 @@ table 50160 "Student Form"
 
     trigger OnInsert()
     begin
-
+        Issales.Get()
+        Iscodeunit.InitSeries(Issales."Student Symbol", IsSales."Student Symbol", 0D, Rec.Autogenerate, Rec."Bill.No");
     end;
 
     trigger OnModify()
