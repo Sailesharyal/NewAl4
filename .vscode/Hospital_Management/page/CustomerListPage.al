@@ -1,10 +1,12 @@
 page 50201 "Customer Detail List"
+
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Customer Detail";
     CardPageId = "Customer Detail Page";
+
 
 
     layout
@@ -51,6 +53,11 @@ page 50201 "Customer Detail List"
                     ApplicationArea = All;
                 }
                 field("Register Time"; Rec."Register Time")
+                {
+                    ApplicationArea = All;
+                }
+
+                field(Problem; Rec.Problem)
                 {
                     ApplicationArea = All;
                 }

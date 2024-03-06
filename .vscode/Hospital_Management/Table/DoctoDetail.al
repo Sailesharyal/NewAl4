@@ -5,6 +5,8 @@ table 50202 "Doctor Detail"
 
     fields
     {
+
+
         field(1; "Doctor Number"; Code[20])
         {
             DataClassification = CustomerContent;
@@ -22,11 +24,19 @@ table 50202 "Doctor Detail"
             DataClassification = CustomerContent;
         }
 
+
+
         field(3; Speciality; Option)
         {
             OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
 
             DataClassification = CustomerContent;
+        }
+
+        field(5; "Patient's Problem"; Code[20])
+        {
+            DataClassification = CustomerContent;
+
         }
 
 

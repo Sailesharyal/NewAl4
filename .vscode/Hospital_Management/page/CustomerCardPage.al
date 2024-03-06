@@ -50,6 +50,12 @@ page 50200 "Customer Detail Page"
                     ApplicationArea = All;
                 }
 
+                field(Problem; Rec.Problem)
+                {
+                    ApplicationArea = All;
+                }
+
+
 
 
             }

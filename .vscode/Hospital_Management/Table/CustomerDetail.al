@@ -137,6 +137,7 @@ table 50200 "Customer Detail"
             DataClassification = ToBeClassified;
         }
 
+
     }
 
 

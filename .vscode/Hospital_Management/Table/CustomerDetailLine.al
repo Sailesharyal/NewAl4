@@ -1,6 +1,7 @@
 table 50199 "Customer Detail Line"
 {
     DataClassification = ToBeClassified;
+    Caption = 'Medicine Detail';
 
     fields
     {

@@ -5,6 +5,7 @@ page 50198 "CusDetailLineList"
     UsageCategory = Lists;
     SourceTable = "Customer Detail Line";
     AutoSplitKey = true;
+    Caption = 'Medcine Detail';
 
     layout
     {
