@@ -1,17 +1,19 @@
-pageextension 50111 "Customer Card Ext" extends "Customer Card"
+pageextension 50113 "Sales line Ext" extends "Sales Order Subform"
 {
     layout
     {
         addafter("No.")
         {
-            field("External No"; Rec."External No")
+            field("Number Detail"; Rec."Number Detail")
             {
                 ApplicationArea = All;
             }
-
-
         }
-        // Add changes to page layout here
+
+
+
+
+
     }
 
     actions

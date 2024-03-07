@@ -9,6 +9,8 @@ pageextension 50120 MyExtensionofpage extends "Sales & Receivables Setup"
                 ApplicationArea = All;
 
             }
+
+
         }
     }
 
