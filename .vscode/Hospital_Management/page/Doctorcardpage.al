@@ -12,6 +12,9 @@ page 50204 "Doctor Card Page"
         {
             group("Doctor Detail")
             {
+
+
+
                 field("Doctor Name(DR.)"; Rec."Doctor Name(DR.)")
                 {
                     ApplicationArea = All;
@@ -23,10 +26,10 @@ page 50204 "Doctor Card Page"
                     ApplicationArea = All;
                 }
 
-                field(Speciality; Rec.Speciality)
-                {
-                    ApplicationArea = All;
-                }
+                // field(Speciality; Rec.Speciality)
+                // {
+                //     ApplicationArea = All;
+                // }
 
 
 

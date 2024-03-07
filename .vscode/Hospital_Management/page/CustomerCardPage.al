@@ -66,10 +66,10 @@ page 50200 "Customer Detail Page"
                     ApplicationArea = ALL;
                 }
 
-                field("Doctor's Speciality"; Rec."Doctor's Speciality")
-                {
-                    ApplicationArea = ALL;
-                }
+                // field("Doctor's Speciality"; Rec."Doctor's Speciality")
+                // {
+                //     ApplicationArea = ALL;
+                // }
 
                 field("Doctor Code"; Rec."Doctor Code")
                 {

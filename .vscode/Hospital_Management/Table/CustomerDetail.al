@@ -109,16 +109,16 @@ table 50200 "Customer Detail"
 
         }
 
-        field(8; "Doctor's Speciality"; Option)
-        {
+        // // field(8; "Doctor's Speciality"; Option)
+        // // {
 
-            OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
-            FieldClass = FlowField;
-            CalcFormula = lookup("Doctor Detail".Speciality where("Doctor Name(DR.)" = field("Doctor Name")));
-            Editable = false;
+        // //     OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
+        // //     FieldClass = FlowField;
+        // //     CalcFormula = lookup("Doctor Detail".Speciality where("Doctor Name(DR.)" = field("Doctor Name")));
+        // //     Editable = false;
 
 
-        }
+        // }
 
         field(12; "Discount"; Boolean)
         {

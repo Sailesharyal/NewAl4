@@ -23,15 +23,25 @@ page 50205 "Doctor Detail"
                     ApplicationArea = All;
                 }
 
-                field(Speciality; Rec.Speciality)
-                {
-                    ApplicationArea = All;
-                }
+                // field(Speciality; Rec.Speciality)
+                // {
+                //     ApplicationArea = All;
+                // }
 
                 // field("For_Number Series"; Rec."For_Number Series")
                 // {
                 //     ApplicationArea = All;
                 // }
+
+                field("Secondary Doctor Name(DR.)"; Rec."Secondary Doctor Name(DR.)") { ApplicationArea = All; }
+
+                field("Patient's Problem"; Rec."Patient's Problem")
+                {
+                    ApplicationArea = All;
+                }
+
+
+
 
             }
         }

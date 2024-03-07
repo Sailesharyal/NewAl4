@@ -25,13 +25,19 @@ table 50202 "Doctor Detail"
         }
 
 
-
-        field(3; Speciality; Option)
+        field(3; "Secondary Doctor Name(DR.)"; Code[20])
         {
-            OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
-
             DataClassification = CustomerContent;
         }
+
+
+
+        // field(3; Speciality; Option)
+        // {
+        //     OptionMembers = " ","Dermatology","Infectious disease","Ophthalmology","Obstetrics and gynecology","Cardiology","Endocrinology","Gastroenterology";
+
+        //     DataClassification = CustomerContent;
+        // }
 
         field(5; "Patient's Problem"; Code[20])
         {
@@ -47,7 +53,7 @@ table 50202 "Doctor Detail"
 
     keys
     {
-        key(Key1; "Doctor Number")
+        key(Key1; "Patient's Problem")
         {
             Clustered = true;
         }
