@@ -1,23 +1,23 @@
-pageextension 50202 "Rec&xRe" extends "Customer Card"
-{
-    layout
-    {
+// pageextension 50202 "Rec&xRe" extends "Customer Card"
+// {
+//     layout
+//     {
 
-    }
+//     }
 
-    actions
-    {
-        // Add changes to page actions here
-    }
+//     actions
+//     {
+//         // Add changes to page actions here
+//     }
 
-    trigger OnOpenPage()
+//     trigger OnOpenPage()
 
-    begin
-        Message('On open Page the adress.the address is %1', Rec.Name);
-    end;
+//     begin
+//         Message('On open Page the adress.the address is %1', Rec.Name);
+//     end;
 
-    var
-        myInt: Integer;
+//     var
+//         myInt: Integer;
 
 
-}
+// }

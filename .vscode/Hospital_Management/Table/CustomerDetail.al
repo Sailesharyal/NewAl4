@@ -123,6 +123,7 @@ table 50200 "Customer Detail"
         field(12; "Discount"; Boolean)
         {
             DataClassification = ToBeClassified;
+            Editable = false;
 
 
         }
@@ -177,6 +178,8 @@ table 50200 "Customer Detail"
     end;
 
     trigger OnRename()
+    var
+        a: Codeunit "Sales Post Invoice";
     begin
 
     end;
