@@ -2,7 +2,20 @@ pageextension 50130 MyVendorExt extends "Vendor List"
 {
     layout
     {
-        // Add changes to page layout here
+        addafter("No.")
+        {
+            field{
+
+
+ trigger OnOpenPage()
+                var
+                    myInt: Integer;
+                begin
+
+                end;
+            }
+
+        }
     }
 
     actions
@@ -22,9 +35,8 @@ pageextension 50130 MyVendorExt extends "Vendor List"
 
 
 
-                trigger OnAction()                  //Learning about Set Filters 
+                trigger OnAction()
                 begin
-                    // Rec.SetFilter("No.", '80001..80010 | 80025');
                     Rec.SetFilter("No.", '%1..%2 | %3', '80001', '80010', '80025');
                 end;
             }
