@@ -3,6 +3,7 @@ report 50150 "Customer Detail"
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
+    // ProcessingOnly=true
     RDLCLayout = '.vscode/Hospital_Management/Report/CustomerDetail.RDL';
 
 
@@ -10,6 +11,7 @@ report 50150 "Customer Detail"
     {
         dataitem("Customer Detail"; "Customer Detail")
         {
+            // DataItemTableView = where("Contact NUmber" = filter('=0'));
             column(Customer_Number; "Customer Number")
             {
 
@@ -34,6 +36,7 @@ report 50150 "Customer Detail"
             {
                 DataItemLinkReference = "Customer Detail";
                 DataItemLink = "Customer No" = field("Customer Number");
+                DataItemTableView = where(Quantity = filter('<>0'));
 
                 column(Line_No; "Line No")
                 {
@@ -62,11 +65,32 @@ report 50150 "Customer Detail"
 
 
             }
+            trigger OnPreDataItem()
+
+            begin
+                // "Customer Detail".Reset();
+                "Customer Detail Line".Reset();
+                "Customer Detail Line".SetRange(Quantity, myInt);
+            end;
         }
 
 
 
 
+    }
+    requestpage
+    {
+        layout
+        {
+            area(Content)
+            {
+                field(myInt; myInt)
+                {
+                    ApplicationArea = All;
+                    // FieldPropertyName = FieldPropertyValue
+                }
+            }
+        }
     }
 
     var

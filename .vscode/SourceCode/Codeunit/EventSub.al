@@ -30,10 +30,10 @@ codeunit 50111 EventSub
 
 
 
-    [EventSubscriber(ObjectType::Table, Database::"Sales Header", 'OnAfterOnInsertevent', 'Sell-to Customer No.', false, false)]
-    local procedure ()
-    begin
+    //   [EventSubscriber(ObjectType::Report, Database::Customer,'', '', false, false)]
+    //   local procedure MyProcedure()
+    //   begin
 
-    end;
+    //   end;
 
 }
